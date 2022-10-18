@@ -3,6 +3,7 @@ run: sign-detector road-follower
 setup:
 	sudo apt install v4l-utils
 	sudo apt install v4l2loopback-dkms
+	sudo apt install mosquitto
 	sudo -H pip3 install --upgrade pip
 	pip3 install -r requirements.txt
 
