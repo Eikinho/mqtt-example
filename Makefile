@@ -4,6 +4,7 @@ setup:
 	sudo apt install v4l-utils
 	sudo apt install v4l2loopback-dkms
 	sudo apt install mosquitto
+	sudo apt-get install libcanberra-gtk-module
 	sudo apt install python3-pip
 	sudo -H pip3 install --upgrade pip
 	pip3 install -r requirements.txt
