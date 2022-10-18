@@ -22,11 +22,11 @@ subscriber:
 	python3 subscriber.py
 
 create-devices:
-	sudo modprobe v4l2loopback devices=7
+	sudo modprobe v4l2loopback devices=4
 
 video-loop:
 	ffmpeg -re -stream_loop 30 -i video1.mp4 -vf format=yuv420p -f v4l2 /dev/video5
 
 
 clone-video:
-	ffmpeg -f video4linux2 -i /dev/video5 -codec copy -f v4l2 /dev/video6 -codec copy -f v4l2 /dev/video7
+	ffmpeg -f video4linux2 -i /dev/video0 -codec copy -f v4l2 /dev/video3 -codec copy -f v4l2 /dev/video4
