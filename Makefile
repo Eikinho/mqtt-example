@@ -1,3 +1,5 @@
+run: sign-detector road-follower
+
 broker:
 	mosquitto -p 1884
 	
@@ -10,11 +12,11 @@ road-follower:
 subscriber:
 	python3 subscriber.py
 
-video-loop:
-	ffmpeg -re -stream_loop 30 -i video1.mp4 -vf format=yuv420p -f v4l2 /dev/video0
-
 create-devices:
 	sudo modprobe v4l2loopback devices=7
+
+video-loop:
+	ffmpeg -re -stream_loop 30 -i video1.mp4 -vf format=yuv420p -f v4l2 /dev/video5
 
 
 clone-video:
